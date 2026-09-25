@@ -1,1 +1,21 @@
-<h1>Página Inicial</h1>
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-esquerda">
+            <a class="navbar-logo" href="/">Página Inicial</a>
+            <ul class="navbar-list">
+
+                @for (item of itenshome; track item){
+                <li class="navbaritem">
+                    <a [href]="item.link"> {{item.label}}</a>
+                </li>
+
+            }
+            </ul>
+        </div>
+        <div class="navbar-acoes">
+            <a href="cadastro-clientes",>Cadastrar-se</a>
+            <a href="login">Login</a>
+
+        </div>
+    </div>
+</nav>
