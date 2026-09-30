@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { CarrinhoComprasComponent } from './pages/carrinho-compras/carrinho-compras.component';
-import { CadastroClientesComponent } from './pages/cadastro-clientes/cadastro-clientes.component';
 import { AjudaComponent } from './pages/ajuda/ajuda.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CrudComponent } from './pages/crud/crud.component';
 
 
 export const routes: Routes = [
@@ -12,7 +12,7 @@ export const routes: Routes = [
     {path: 'login', component:LoginComponent},
     {path: 'produtos', component:ProdutosComponent},
     {path: 'carrinho-compras', component:CarrinhoComprasComponent},
-    {path: 'cadastro-clientes', component:CadastroClientesComponent},
     {path: 'ajuda', component:AjudaComponent},
+    {path: 'crud', component:CrudComponent},
 
 ];
