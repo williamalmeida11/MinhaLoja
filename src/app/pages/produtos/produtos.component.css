@@ -3,8 +3,10 @@ body{
 }
 
 #remedios{
-    margin-left: 450px;
-    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
 }
 h1{
     text-align: center;
@@ -12,7 +14,7 @@ h1{
 }
 #dipirona{
 background-color: azure;
-margin-left: 30px;
+
 display: inline-block;
 text-align: center
 
@@ -28,7 +30,7 @@ text-align: center
 #loratadina{
 display: inline-block;
 background-color: azure;
-margin-left: 30px;
+
 text-align: center;
 
 }
@@ -41,7 +43,7 @@ text-align: center;
 #dorflax{
 display: inline-block;
 background-color: azure;
-margin-left: 30px;
+
 text-align: center
 
 }
