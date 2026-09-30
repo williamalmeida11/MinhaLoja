@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-itenshome = [
-  {label: 'Produtos', link:'produtos'},
-  {label: 'Carrinho de compras', link:'/carrinho-compras'}, 
-  {label: 'Ajuda', link:'/ajuda'}
-]
+
 }
