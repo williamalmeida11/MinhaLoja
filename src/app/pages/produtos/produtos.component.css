@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(209, 209, 209);
+}
+
+#remedios{
+    margin-left: 450px;
+    padding-bottom: 50px;
+}
+h1{
+    text-align: center;
+    padding-block: 10px;
+}
+#dipirona{
+background-color: azure;
+margin-left: 30px;
+display: inline-block;
+text-align: center
+
+}
+
+
+#d{
+     width: 200px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+#loratadina{
+display: inline-block;
+background-color: azure;
+margin-left: 30px;
+text-align: center;
+
+}
+#l{
+     width: 200px;
+    height: 200px;
+    margin-left: 30px;
+}
+
+#dorflax{
+display: inline-block;
+background-color: azure;
+margin-left: 30px;
+text-align: center
+
+}
+
+#d{
+     width: 200px;
+    height: 200px;
+}
