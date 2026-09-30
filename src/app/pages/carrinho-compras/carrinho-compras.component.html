@@ -1,1 +1,30 @@
-<h1>compras:</h1>
+<body>
+    <div id="produtos-carrinho">
+        <h1>Carrinho de Compras</h1>
+        <div class="produto-carrinho">
+        <h3>Dipirona</h3>
+        <p>Preço:  R$ 16,90</p>
+        <button (click)="diminuirDipirona()">-</button>
+        <button (click)="adicionarDipirona()">+</button>
+         <p class="quantidade">{{ quantidadeDipirona }}</p>
+        </div>
+        
+        <div class="produto-carrinho">
+        <h3>Loratadina</h3>
+        <p>Preço: R$ 6,99</p>
+        <button (click)="diminuirLoratadina()">-</button>
+        <button (click)="adiconarLoratadina()">+</button>
+        <p class="quantidade">{{quantidadeLoratadina}}</p>
+        </div>
+        
+        <div class="produto-carrinho">
+        <h3>Dorflax</h3>
+        <p>Preço: R$ 8,51</p>
+        <button (click)="diminuirDorflax()">-</button>
+        <button (click)="adicionarDorflax()">+</button>
+        <p class="quantidade">{{quantidadeDorflax}}</p>
+        </div>
+    </div>
+
+    <h2>Total da compra: R$ {{totalDipirona()+totalLoratadina()+totalDorflax()}}</h2>
+</body>
