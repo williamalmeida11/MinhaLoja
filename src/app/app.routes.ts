@@ -5,6 +5,7 @@ import { CarrinhoComprasComponent } from './pages/carrinho-compras/carrinho-comp
 import { AjudaComponent } from './pages/ajuda/ajuda.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CrudComponent } from './pages/crud/crud.component';
+import { CadastroClientesComponent } from './pages/cadastro-clientes/cadastro-clientes.component';
 
 
 export const routes: Routes = [
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path: 'carrinho-compras', component:CarrinhoComprasComponent},
     {path: 'ajuda', component:AjudaComponent},
     {path: 'crud', component:CrudComponent},
+    {path: 'cadastro-clientes', component:CadastroClientesComponent},
 
 ];
