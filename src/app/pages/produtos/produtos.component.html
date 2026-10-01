@@ -1,36 +1,15 @@
 <body>
 
     <h1>Produtos</h1>
-    
-<div id="remedios">
-    <div id="dipirona">
-        <img id="d" src="imgCompras/dipirona.jpg" alt="Dipirona">
-    <h3 >Dipirona</h3>
-    <h4>R$ 16,90</h4>
-    <p>Medicamento para aliviar dores e febre.</p>
-    <button routerLink="/carrinho-compras"><b>Adicionar ao carrinho</b></button>
-    </div>
-    
-    <div id="loratadina">
-        <img id="l" src="imgCompras/loratadina.png" alt="Loratadina">
-        <h3>Loratadina</h3>
-        <h4>R$ 6,99</h4>
-          <p>Medicamento utilizado para sintomas de alergia.</p>
-          <button routerLink="/carrinho-compras"><b>Adicionar ao carrinho</b></button>
-    
-    </div>
-    
-    <div id="dorflax">
-        <img id="d" src="imgCompras/dorflax.jpg" alt="Dorflax">
-    <h3 >Dorflax</h3>
-    <h4>R$ 8,51</h4>
-    <p>Medicamento utilizado para aliviar dores.</p>
-    <button routerLink="/carrinho-compras"><b>Adicionar ao carrinho</b></button>
-</div>
 
-</div>
+    <div id="remedios">
+        <div class="produto" *ngFor="let produto of produtos">
+            <img class="imagem-produto" [src]="produto.imagem" [alt]="produto.nome">
+            <h3>{{ produto.nome }}</h3>
+            <h4>R$ {{ produto.preco.toFixed(2).replace('.', ',') }}</h4>
+            <p>{{ produto.descricao }}</p>
+            <button routerLink="/carrinho-compras"><b>Adicionar ao carrinho</b></button>
+        </div>
+    </div>
+
 </body>
-
-
-
-

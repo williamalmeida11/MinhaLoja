@@ -1,1 +1,33 @@
-<p>crud works!</p>
+<body>
+
+    <h1>Gerenciar Produtos</h1>
+
+    <form class="form-produto" (ngSubmit)="salvar()">
+        <input type="text" [(ngModel)]="nome" name="nome" placeholder="Nome do produto">
+        <input type="number" [(ngModel)]="preco" name="preco" placeholder="Preço" step="0.01">
+        <input type="text" [(ngModel)]="descricao" name="descricao" placeholder="Descrição">
+        <input type="text" [(ngModel)]="imagem" name="imagem" placeholder="imgCompras/nome.jpg">
+
+        <button type="submit">{{ idEmEdicao === 0 ? 'Adicionar produto' : 'Salvar alterações' }}</button>
+        <button type="button" *ngIf="idEmEdicao !== 0" (click)="cancelarEdicao()">Cancelar</button>
+    </form>
+
+    <table class="tabela-produtos">
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+        </tr>
+        <tr *ngFor="let produto of produtos">
+            <td>{{ produto.nome }}</td>
+            <td>R$ {{ produto.preco.toFixed(2).replace('.', ',') }}</td>
+            <td>{{ produto.descricao }}</td>
+            <td>
+                <button (click)="editar(produto)">Editar</button>
+                <button (click)="remover(produto.id)">Excluir</button>
+            </td>
+        </tr>
+    </table>
+
+</body>

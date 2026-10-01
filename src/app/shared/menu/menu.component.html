@@ -1,21 +1,21 @@
 <nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-esquerda">
-            <a class="navbar-logo" href="/">Página Inicial</a>
+            <a class="navbar-logo" routerLink="/">Página Inicial</a>
             <ul class="navbar-list">
 
                 @for (item of itensMenu; track item){
                 <li class="navbaritem">
-                    <a [href]="item.link"> {{item.label}}</a>
+                    <a [routerLink]="item.link"> {{item.label}}</a>
                 </li>
 
                 }
             </ul>
         </div>
         <div class="navbar-acoes">
-            <a href="crud">CRUD</a>
-            <a href="cadastro-clientes">Cadastre-se</a>
-            <a href="login">Login</a>
+            <a routerLink="crud">CRUD</a>
+            <a routerLink="cadastro-clientes">Cadastre-se</a>
+            <a routerLink="login">Login</a>
 
         </div>
     </div>

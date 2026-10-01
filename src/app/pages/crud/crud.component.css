@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(209, 209, 209);
+}
+h1{
+    text-align: center;
+    padding-block: 10px;
+}
+.form-produto{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+.form-produto input{
+    padding: 8px;
+}
+.form-produto button{
+    padding: 8px 15px;
+}
+.tabela-produtos{
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: azure;
+}
+.tabela-produtos th, .tabela-produtos td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.tabela-produtos button{
+    margin: 0 5px;
+}

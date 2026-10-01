@@ -5,52 +5,28 @@ body{
 #remedios{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
     padding-bottom: 50px;
-    
 }
 h1{
     text-align: center;
     padding-block: 10px;
 }
-#dipirona{
-background-color: azure;
-display: inline-block;
-text-align: center;
 
+.produto{
+    background-color: azure;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
 }
 
-button{
-    margin-bottom: 20px;
-}
-#d{
-     width: 200px;
+.imagem-produto{
+    width: 200px;
     height: 200px;
     margin-left: 10px;
 }
 
-#loratadina{
-display: inline-block;
-background-color: azure;
-
-text-align: center;
-
-}
-#l{
-     width: 200px;
-    height: 200px;
-    margin-left: 30px;
-}
-
-#dorflax{
-display: inline-block;
-background-color: azure;
-
-text-align: center
-
-}
-
-#d{
-     width: 200px;
-    height: 200px;
+button{
+    margin-bottom: 20px;
 }
