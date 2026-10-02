@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -12,8 +12,7 @@ export class Produto {
   ) {}
 }
 
-@Injectable({ providedIn: 'root' })
-export class ProdutoService {
+class ProdutoService {
 
   produtos: Produto[] = [
     new Produto(1, 'Dipirona', 16.90, 'Medicamento para aliviar dores e febre.', 'imgCompras/dipirona.jpg'),
@@ -54,6 +53,8 @@ export class ProdutoService {
   }
 }
 
+export const produtoService = new ProdutoService();
+
 @Component({
   selector: 'app-crud',
   imports: [CommonModule, FormsModule],
@@ -62,17 +63,13 @@ export class ProdutoService {
 })
 export class CrudComponent {
 
-  produtos: Produto[];
+  produtos: Produto[] = produtoService.listar();
   idEmEdicao: number = 0;
 
   nome: string = '';
   preco: number = 0;
   descricao: string = '';
   imagem: string = '';
-
-  constructor(private produtoService: ProdutoService) {
-    this.produtos = this.produtoService.listar();
-  }
 
   salvar() {
     if (this.nome.trim() === '' || this.preco <= 0) {
@@ -81,9 +78,9 @@ export class CrudComponent {
     }
 
     if (this.idEmEdicao === 0) {
-      this.produtoService.adicionar(this.nome, this.preco, this.descricao, this.imagem);
+      produtoService.adicionar(this.nome, this.preco, this.descricao, this.imagem);
     } else {
-      this.produtoService.editar(this.idEmEdicao, this.nome, this.preco, this.descricao, this.imagem);
+      produtoService.editar(this.idEmEdicao, this.nome, this.preco, this.descricao, this.imagem);
     }
 
     this.limparFormulario();
@@ -98,7 +95,7 @@ export class CrudComponent {
   }
 
   remover(id: number) {
-    this.produtoService.remover(id);
+    produtoService.remover(id);
 
     if (this.idEmEdicao === id) {
       this.limparFormulario();

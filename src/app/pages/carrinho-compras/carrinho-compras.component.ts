@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Produto, ProdutoService } from '../crud/crud.component';
+import { Produto, produtoService } from '../crud/crud.component';
 
 @Component({
   selector: 'app-carrinho-compras',
@@ -10,12 +10,10 @@ import { Produto, ProdutoService } from '../crud/crud.component';
 })
 export class CarrinhoComprasComponent {
 
-  produtos: Produto[];
+  produtos: Produto[] = produtoService.listar();
   quantidades: number[] = [];
 
-  constructor(private produtoService: ProdutoService) {
-    this.produtos = this.produtoService.listar();
-
+  constructor() {
     for (let i = 0; i < this.produtos.length; i++) {
       this.quantidades.push(0);
     }
