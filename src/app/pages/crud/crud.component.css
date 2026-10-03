@@ -1,33 +1,83 @@
-body{
+body {
     background-color: rgb(209, 209, 209);
 }
-h1{
+
+h1 {
     text-align: center;
     padding-block: 10px;
+    color: #333333;
 }
-.form-produto{
+
+.form-produto {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding-bottom: 30px;
+    width: 90%;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
-.form-produto input{
-    padding: 8px;
+
+.form-produto input {
+    padding: 8px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
 }
-.form-produto button{
-    padding: 8px 15px;
+
+.form-produto button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
 }
-.tabela-produtos{
+
+.form-produto button[type="submit"] {
+    background-color: #034d1f;
+}
+
+.form-produto button[type="button"] {
+    background-color: #999999;
+}
+
+.tabela-produtos {
+    width: 90%;
     margin: 0 auto;
-    border-collapse: collapse;
-    background-color: azure;
+    background-color: #ffffff;
 }
-.tabela-produtos th, .tabela-produtos td{
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+
+.tabela-produtos th {
+    background-color: #034d1f;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
 }
-.tabela-produtos button{
-    margin: 0 5px;
+
+.tabela-produtos td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tabela-produtos tr:nth-child(even) {
+    background-color: #fdf3e2;
+}
+
+.tabela-produtos button {
+    padding: 6px 14px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.tabela-produtos button:first-of-type {
+    background-color: #718381;
+}
+
+.tabela-produtos button:last-of-type {
+    background-color: #718381;
 }
