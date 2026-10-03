@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Produto, produtoService } from '../crud/crud.component';
+import { Produto, produtos } from '../crud/crud.component';
 
 @Component({
   selector: 'app-carrinho-compras',
@@ -10,7 +10,7 @@ import { Produto, produtoService } from '../crud/crud.component';
 })
 export class CarrinhoComprasComponent {
 
-  produtos: Produto[] = produtoService.listar();
+  produtos: Produto[] = produtos;
   quantidades: number[] = [];
 
   constructor() {

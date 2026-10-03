@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { Produto, produtoService } from '../crud/crud.component';
+import { Produto, produtos } from '../crud/crud.component';
 
 @Component({
   selector: 'app-produtos',
@@ -11,5 +11,5 @@ import { Produto, produtoService } from '../crud/crud.component';
 })
 export class ProdutosComponent {
 
-  produtos: Produto[] = produtoService.listar();
+  produtos: Produto[] = produtos;
 }

@@ -3,57 +3,29 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 export class Produto {
-  constructor(
-    public id: number,
-    public nome: string,
-    public preco: number,
-    public descricao: string,
-    public imagem: string
-  ) {}
-}
+  id = 0;
+  nome = '';
+  preco = 0;
+  descricao = '';
+  imagem = '';
 
-class ProdutoService {
-
-  produtos: Produto[] = [
-    new Produto(1, 'Dipirona', 16.90, 'Medicamento para aliviar dores e febre.', 'imgCompras/dipirona.jpg'),
-    new Produto(2, 'Loratadina', 6.99, 'Medicamento utilizado para sintomas de alergia.', 'imgCompras/loratadina.png'),
-    new Produto(3, 'Dorflax', 8.51, 'Medicamento utilizado para aliviar dores.', 'imgCompras/dorflax.jpg'),
-  ];
-
-  proximoId: number = 4;
-
-  listar() {
-    return this.produtos;
-  }
-
-  adicionar(nome: string, preco: number, descricao: string, imagem: string) {
-    const novoProduto = new Produto(this.proximoId, nome, preco, descricao, imagem);
-    this.proximoId = this.proximoId + 1;
-    this.produtos.push(novoProduto);
-  }
-
-  editar(id: number, nome: string, preco: number, descricao: string, imagem: string) {
-    for (let i = 0; i < this.produtos.length; i++) {
-      if (this.produtos[i].id === id) {
-        this.produtos[i].nome = nome;
-        this.produtos[i].preco = preco;
-        this.produtos[i].descricao = descricao;
-        this.produtos[i].imagem = imagem;
-      }
-    }
-  }
-
-  remover(id: number) {
-    for (let i = 0; i < this.produtos.length; i++) {
-      if (this.produtos[i].id === id) {
-        this.produtos.splice(i, 1);
-        break;
-      }
-    }
+  constructor(id: number, nome: string, preco: number, descricao: string, imagem: string) {
+    this.id = id;
+    this.nome = nome;
+    this.preco = preco;
+    this.descricao = descricao;
+    this.imagem = imagem;
   }
 }
 
-export const produtoService = new ProdutoService();
+// Lista de produtos compartilhada entre os componentes (produtos, carrinho e crud).
+export let produtos: Produto[] = [
+  new Produto(1, 'Dipirona', 16.90, 'Medicamento para aliviar dores e febre.', 'imgCompras/dipirona.jpg'),
+  new Produto(2, 'Loratadina', 6.99, 'Medicamento utilizado para sintomas de alergia.', 'imgCompras/loratadina.png'),
+  new Produto(3, 'Dorflax', 8.51, 'Medicamento utilizado para aliviar dores.', 'imgCompras/dorflax.jpg'),
+];
+
+let proximoId = 4;
 
 @Component({
   selector: 'app-crud',
@@ -63,7 +35,7 @@ export const produtoService = new ProdutoService();
 })
 export class CrudComponent {
 
-  produtos: Produto[] = produtoService.listar();
+  produtos: Produto[] = produtos;
   idEmEdicao: number = 0;
 
   nome: string = '';
@@ -78,9 +50,18 @@ export class CrudComponent {
     }
 
     if (this.idEmEdicao === 0) {
-      produtoService.adicionar(this.nome, this.preco, this.descricao, this.imagem);
+      const novoProduto = new Produto(proximoId, this.nome, this.preco, this.descricao, this.imagem);
+      proximoId = proximoId + 1;
+      produtos.push(novoProduto);
     } else {
-      produtoService.editar(this.idEmEdicao, this.nome, this.preco, this.descricao, this.imagem);
+      for (let i = 0; i < produtos.length; i++) {
+        if (produtos[i].id === this.idEmEdicao) {
+          produtos[i].nome = this.nome;
+          produtos[i].preco = this.preco;
+          produtos[i].descricao = this.descricao;
+          produtos[i].imagem = this.imagem;
+        }
+      }
     }
 
     this.limparFormulario();
@@ -95,7 +76,12 @@ export class CrudComponent {
   }
 
   remover(id: number) {
-    produtoService.remover(id);
+    for (let i = 0; i < produtos.length; i++) {
+      if (produtos[i].id === id) {
+        produtos.splice(i, 1);
+        break;
+      }
+    }
 
     if (this.idEmEdicao === id) {
       this.limparFormulario();
