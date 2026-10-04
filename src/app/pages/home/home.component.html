@@ -1,0 +1,105 @@
+<div class="home-container">
+
+
+  <div class="carrinho">
+    🛒
+    <span>Carrinho</span>
+  </div>
+
+  <section class="carrossel">
+
+
+    <button class="seta esquerda" (click)="anterior()">
+      &#10094;
+    </button>
+
+    <!-- Slide 1 -->
+    <div class="slide" *ngIf="slideAtual === 0">
+      <div class="texto-slide">
+        <h1>Bem-vindo à Drug Dealers</h1>
+        <p>
+          Sua farmácia para cuidar da sua saúde e bem-estar.
+        </p>
+      </div>
+
+      <img src="/MinhaLoja-main/public/imagensLoja/imagemLogo.jpg" alt="Drug Dealers">
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide produtos-slide" *ngIf="slideAtual === 1">
+      <div class="texto-slide">
+        <h1>Produtos em destaque</h1>
+        <p>
+          Confira alguns dos produtos disponíveis em nossa farmácia.
+        </p>
+      </div>
+
+      <div class="produtos">
+        <div class="produto">
+          <img src="" alt="Dipirona">
+          <strong>Dipirona</strong>
+          <span>R$ 16,90</span>
+        </div>
+
+        <div class="produto">
+         <img src="" alt="">
+          <strong>Loratadina</strong>
+          <span>R$ 6,99</span>
+        </div>
+
+        <div class="produto">
+          <img src="/MinhaLoja-main/public/imgCompras/dorflax.jpg" alt="Dorflex">
+          <strong>Dorflex</strong>
+          <span>R$ 8,51</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <div class="texto-slide">
+        <h1>Cuide da sua saúde</h1>
+        <p>
+          Encontre produtos para diferentes necessidades
+          de cuidado e bem-estar.
+        </p>
+      </div>
+
+      <div class="icone-saude">
+        ❤️
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+      <div class="texto-slide">
+        <h1>Medicamentos e cuidados</h1>
+        <p>
+          Encontre o que precisa para o seu dia a dia.
+        </p>
+      </div>
+
+      <div class="icone-saude">
+        💊
+      </div>
+    </div>
+
+    <!-- Botão próximo -->
+    <button class="seta direita" (click)="proximo()">
+      &#10095;
+    </button>
+
+  </section>
+
+  <!-- Indicadores -->
+  <div class="indicadores">
+
+    <button
+      *ngFor="let slide of [0, 1, 2, 3]"
+      [class.ativo]="slideAtual === slide"
+      (click)="irParaSlide(slide)">
+    </button>
+
+  </div>
+
+</div>
