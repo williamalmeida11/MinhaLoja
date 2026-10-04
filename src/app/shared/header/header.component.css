@@ -1,7 +1,7 @@
 .navbar {
   padding: 16px 32px;
-  background-color: #ffffff;
-  color: #0055b8;
+  background-color: #234D36;
+  color: #F2E8C9;
   font-family: Arial, Helvetica, sans-serif;
 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -31,7 +31,7 @@
 }
 
 .navbar a {
-  color: #0055b8;
+  color: #D9A928;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
@@ -42,7 +42,7 @@
 }
 
 .navbar-logo img {
-    width: 110px;
+    width: 130px;
     height: auto;
     display: block;
 }

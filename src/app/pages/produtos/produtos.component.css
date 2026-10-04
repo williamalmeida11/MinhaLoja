@@ -29,4 +29,10 @@ h1{
 
 button{
     margin-bottom: 20px;
+    background-color: #F6F2E6;
+}
+
+button:hover{
+    background-color: #D9A928;
+
 }

@@ -6,3 +6,8 @@
     --verde-claro: #EDF5EF;
     --texto: #222222;
 }
+
+fundo-padrao {
+    background-color: var(--fundo);
+    color: var(--texto); 
+}
