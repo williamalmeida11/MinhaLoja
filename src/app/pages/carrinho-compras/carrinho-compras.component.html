@@ -1,15 +1,93 @@
+<main class="pagina-carrinho">
+  <h1>Carrinho de Compras</h1>
 
-    <div id="produtos-carrinho">
-        <h1>Carrinho de Compras</h1>
+  <section class="lista-carrinho" *ngIf="produtos.length > 0">
+    <article
+      class="produto-carrinho"
+      *ngFor="let produto of produtos; let i = index"
+    >
+      <img
+        class="imagem-carrinho"
+        [src]="produto.imagem"
+        [alt]="'Imagem de ' + produto.nome"
+      />
 
-        <div class="produto-carrinho" *ngFor="let produto of produtos; let i = index">
-            <h3>{{ produto.nome }}</h3>
-            <p>Preço: R$ {{ produto.preco.toFixed(2).replace('.', ',') }}</p>
-            <button (click)="diminuir(i)">-</button>
-            <button (click)="adicionar(i)">+</button>
-            <p class="quantidade">{{ quantidades[i] }}</p>
+      <div class="informacoes-carrinho">
+        <h2>{{ produto.nome }}</h2>
+
+        <p class="descricao">
+          {{ produto.descricao }}
+        </p>
+
+        <p class="preco">
+          Preço unitário:
+          <strong>
+            R$ {{ produto.preco.toFixed(2).replace('.', ',') }}
+          </strong>
+        </p>
+
+        <div class="controle-quantidade">
+          <button
+            type="button"
+            (click)="diminuir(i)"
+            [disabled]="quantidades[i] === 1"
+          >
+            -
+          </button>
+
+          <span>{{ quantidades[i] }}</span>
+
+          <button
+            type="button"
+            (click)="adicionar(i)"
+          >
+            +
+          </button>
         </div>
-    </div>
 
-    <h2>Total da compra: R$ {{ total().toFixed(2).replace('.', ',') }}</h2>
+        <p class="subtotal">
+          Subtotal:
+          <strong>
+            R$ {{ subtotal(i).toFixed(2).replace('.', ',') }}
+          </strong>
+        </p>
 
+        <button
+          class="botao-remover"
+          type="button"
+          (click)="remover(i)"
+        >
+          Remover
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <section class="carrinho-vazio" *ngIf="produtos.length === 0">
+    <h2>Seu carrinho está vazio</h2>
+    <p>Adicione algum produto para continuar.</p>
+
+    <button
+      class="botao-produtos"
+      type="button"
+      routerLink="/produtos"
+    >
+      Ver produtos
+    </button>
+  </section>
+
+  <section class="resumo-compra" *ngIf="produtos.length > 0">
+    <h2>Resumo da compra</h2>
+
+    <p>
+      Total da compra:
+      <strong>
+        R$ {{ total().toFixed(2).replace('.', ',') }}
+      </strong>
+    </p>
+
+    <button class="botao-finalizar" type="button">
+      Finalizar compra
+    </button>
+  </section>
+</main>
