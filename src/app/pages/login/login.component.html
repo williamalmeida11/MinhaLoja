@@ -1,25 +1,37 @@
 
 <div class="content-container">
 
+    <h1>Farmácia Vida</h1>
+    <p>Acesse sua conta</p>
+
     <form>
-        <label for="email">Login</label><br>
+        <label for="email">E-mail</label><br>
         <input class="input-simples" id="email" name="email"
-	 type="email" placeholder="Digite seu email"
+            type="email" placeholder="seuemail@exemplo.com"
             (keyup)="validarFormulario()"
             [(ngModel)]="login"
-         />
+        />
 
         <label for="input-senha">Senha</label><br>
         <input class="input-simples" id="input-senha" name="input-senha"
-	type="password" placeholder="Digite sua senha"
+            type="password" placeholder="Digite sua senha"
             (keyup)="validarFormulario()"
             [(ngModel)]="senha"
         />
 
-        <button class="input-submeter"
+        <button class="input-submeter" type="button"
             [disabled]="botaoDesabilitado"
-            (click)="fazerLogin()" >
-            Confirmar
+            (click)="fazerLogin()">
+            Entrar
         </button>
     </form>
+
+    <p class="link-cadastro">
+        Ainda não tem conta? <a routerLink="/cadastro-clientes">Cadastre-se</a>
+    </p>
+
+    <footer class="direitos">
+        <p> 2026 Farmácia Vida.</p>
+    </footer>
+
 </div>
