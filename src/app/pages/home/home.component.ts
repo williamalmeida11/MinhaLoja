@@ -1,9 +1,17 @@
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
+<<<<<<< HEAD
 
 @Component({
   selector: 'app-home',
   imports: [],
+=======
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-home',
+  imports: [CommonModule],
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -46,5 +54,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   irParaSlide(numero: number): void {
     this.slideAtual = numero;
   }
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80

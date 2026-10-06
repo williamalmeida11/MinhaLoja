@@ -1,6 +1,7 @@
 
 <div class="content-container">
 
+<<<<<<< HEAD
     <form>
         <label for="email">Login</label><br>
         <input class="input-simples" id="email" name="email"
@@ -12,14 +13,48 @@
         <label for="input-senha">Senha</label><br>
         <input class="input-simples" id="input-senha" name="input-senha"
 	type="password" placeholder="Digite sua senha"
+=======
+    <h1>Farmácia Vida</h1>
+    <p>Acesse sua conta</p>
+
+    <form>
+        <label for="email">E-mail</label><br>
+        <input class="input-simples" id="email" name="email"
+            type="email" placeholder="seuemail@exemplo.com"
+            (keyup)="validarFormulario()"
+            [(ngModel)]="login"
+        />
+
+        <label for="input-senha">Senha</label><br>
+        <input class="input-simples" id="input-senha" name="input-senha"
+            type="password" placeholder="Digite sua senha"
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
             (keyup)="validarFormulario()"
             [(ngModel)]="senha"
         />
 
+<<<<<<< HEAD
         <button class="input-submeter"
             [disabled]="botaoDesabilitado"
             (click)="fazerLogin()" >
             Confirmar
         </button>
     </form>
+=======
+        <button class="input-submeter" type="button"
+            [disabled]="botaoDesabilitado"
+            (click)="fazerLogin()">
+            Entrar
+        </button>
+    </form>
+
+    <p class="link-cadastro">
+        Ainda não tem conta? <a routerLink="/cadastro-clientes">Cadastre-se</a>
+    </p>
+
+    <footer class="direitos">
+        <p> 2026 Farmácia Vida.</p>
+    </footer>
+
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
 </div>

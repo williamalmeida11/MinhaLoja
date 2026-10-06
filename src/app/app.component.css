@@ -8,6 +8,7 @@ h1 {
 
 
 :host {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -16,4 +17,9 @@ h1 {
 main {
     flex: 1;
     background-color: var(--fundo);
+=======
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
 }

@@ -1,0 +1,41 @@
+.header {
+    background-color: #1976d2;
+    color: white;
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.busca input {
+    width: 350px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+.acoes {
+    display: flex;
+    gap: 20px;
+}
+
+.acoes a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.acoes a:hover {
+    text-decoration: underline;
+}

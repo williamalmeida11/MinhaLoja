@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     <h1>Produtos</h1>
 
@@ -12,3 +13,70 @@
     </div>
 
 
+=======
+<main class="pagina-produtos">
+  <header class="cabecalho-produtos">
+    <div>
+      <span class="subtitulo">Nossa loja</span>
+
+      <h1>Produtos</h1>
+
+      <p>
+        Encontre os melhores produtos para cuidar da sua saúde.
+      </p>
+    </div>
+
+    <button
+      class="botao-carrinho"
+      type="button"
+      routerLink="/carrinho-compras"
+    >
+      Ver carrinho
+    </button>
+  </header>
+
+  <section class="lista-produtos">
+    <article
+      class="produto"
+      *ngFor="let produto of produtos"
+    >
+      <div class="imagem-container">
+        <img
+          class="imagem-produto"
+          [src]="produto.imagem"
+          [alt]="'Imagem de ' + produto.nome"
+        />
+      </div>
+
+      <div class="informacoes-produto">
+        <h2>{{ produto.nome }}</h2>
+
+        <p class="descricao">
+          {{ produto.descricao }}
+        </p>
+
+        <div class="rodape-produto">
+          <strong class="preco">
+            R$ {{ produto.preco.toFixed(2).replace('.', ',') }}
+          </strong>
+
+          <button
+            class="botao-adicionar"
+            type="button"
+            (click)="adicionarAoCarrinho(produto)"
+          >
+            Adicionar
+          </button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <p
+    class="sem-produtos"
+    *ngIf="produtos.length === 0"
+  >
+    Nenhum produto disponível no momento.
+  </p>
+</main>
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80

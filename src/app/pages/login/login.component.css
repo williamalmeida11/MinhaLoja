@@ -43,14 +43,19 @@ form {
     padding: 10px;
     font-size: 16px;
     color: #ffffff;
+<<<<<<< HEAD
     background-color: #D9A928;
 ;
+=======
+    background-color: #0055b8;
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .input-submeter:hover{
     background-color: rgb(219, 171, 38);
 }
@@ -64,4 +69,44 @@ form {
   color: #e2e8f0;
   cursor: not-allowed;
   opacity: 0.7;
+=======
+.input-submeter:hover {
+    background-color: #003b7a;
+}
+
+.input-submeter:disabled {
+  background-color: #94a3b8;
+  color: #e2e8f0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.link-cadastro {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.link-cadastro a {
+    color: #0055b8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-cadastro a:hover {
+    text-decoration: underline;
+}
+
+.direitos {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.direitos p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+.input-simples:focus {
+    outline: none;
+    border: 2px solid #0055b8;
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
 }
