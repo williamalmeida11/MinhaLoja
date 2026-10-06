@@ -47,3 +47,32 @@ details p {
     margin-bottom: 0;
     color: #555;
 }
+
+h1, h2 {
+    color: #000000;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #31724e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-voltar:hover {
+    background-color: #234D36;
+}
+
+details {
+    background-color: #F2E8C9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

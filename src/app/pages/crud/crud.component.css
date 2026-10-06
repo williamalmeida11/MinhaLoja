@@ -62,7 +62,7 @@ h1 {
 }
 
 .tabela-produtos tr:nth-child(even) {
-    background-color: #bcdbbe;
+    background-color: #fdf3e2;
 }
 
 .tabela-produtos button {
