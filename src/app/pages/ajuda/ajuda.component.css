@@ -1,23 +1,34 @@
+:host {
+    display: block;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
 body {
     font-family: Arial, sans-serif;
-    max-width: 700px; /
+    max-width: 700px;
     margin: 40px auto; 
     padding: 20px;
     color: #333;
     line-height: 1.6;
+    text-align: center;
 }
 
 h1, h2 {
-    color: #0056b3;
+    color: #000000;
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 .btn-voltar {
     display: inline-block;
     margin-bottom: 20px;
+    margin-top: 20px;
     padding: 10px 15px;
-    background-color: #0056b3;
+    background-color: #31724e;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -25,21 +36,26 @@ h1, h2 {
 }
 
 .btn-voltar:hover {
-    background-color: #004494; /
+    background-color: #234D36;
 }
 
 details {
-    background-color: #f9f9f9;
+    background-color: #F2E8C9;
     padding: 15px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    text-align: center;
 }
-
 
 summary {
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
+}
+
+p {
+    text-align: center;    
 }
 
 details p {

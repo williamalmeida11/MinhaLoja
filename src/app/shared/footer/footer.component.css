@@ -42,8 +42,9 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid #d19119;
+  border-top: 1px solid #D9A928;
   text-align: center;
   padding: 15px;
   font-size: 14px;
+  color: #D9A928;
 }
