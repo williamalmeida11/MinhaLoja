@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AjudaComponent {
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80

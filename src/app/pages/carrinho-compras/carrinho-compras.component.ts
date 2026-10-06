@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Produto, produtos } from '../crud/crud.component';
+
+@Component({
+  selector: 'app-carrinho-compras',
+  imports: [CommonModule],
+=======
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -7,10 +16,45 @@ import { Produto } from '../crud/crud.component';
   selector: 'app-carrinho-compras',
   standalone: true,
   imports: [CommonModule, RouterLink],
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
   templateUrl: './carrinho-compras.component.html',
   styleUrl: './carrinho-compras.component.css'
 })
 export class CarrinhoComprasComponent {
+<<<<<<< HEAD
+
+  produtos: Produto[] = produtos;
+  quantidades: number[] = [];
+
+  constructor() {
+    for (let i = 0; i < this.produtos.length; i++) {
+      this.quantidades.push(0);
+    }
+  }
+
+  adicionar(indice: number) {
+    this.quantidades[indice] = this.quantidades[indice] + 1;
+  }
+
+  diminuir(indice: number) {
+    if (this.quantidades[indice] > 0) {
+      this.quantidades[indice] = this.quantidades[indice] - 1;
+    }
+  }
+
+  subtotal(indice: number) {
+    return this.produtos[indice].preco * this.quantidades[indice];
+  }
+
+  total() {
+    let soma = 0;
+    for (let i = 0; i < this.produtos.length; i++) {
+      soma = soma + this.subtotal(i);
+    }
+    return soma;
+  }
+}
+=======
   produtos: Produto[] = [];
   quantidades: number[] = [];
 
@@ -62,3 +106,4 @@ export class CarrinhoComprasComponent {
     );
   }
 }
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80

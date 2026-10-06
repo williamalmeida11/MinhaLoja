@@ -1,23 +1,54 @@
+<<<<<<< HEAD
+:host {
+    display: block;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+=======
 body {
     font-family: Arial, sans-serif;
     max-width: 700px; 
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
     margin: 40px auto; 
     padding: 20px;
     color: #333;
     line-height: 1.6;
+<<<<<<< HEAD
+    text-align: center;
+}
+
+h1, h2 {
+    color: #000000;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    text-align: center;
+=======
 }
 
 h1, h2 {
     color: #0056b3;
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
 }
 
 .btn-voltar {
     display: inline-block;
     margin-bottom: 20px;
+<<<<<<< HEAD
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #31724e;
+=======
     padding: 10px 15px;
     background-color: #0056b3;
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -25,21 +56,43 @@ h1, h2 {
 }
 
 .btn-voltar:hover {
+<<<<<<< HEAD
+    background-color: #234D36;
+}
+
+details {
+    background-color: #F2E8C9;
+=======
     background-color: #004494;
 }
 
 details {
     background-color: #f9f9f9;
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
     padding: 15px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+<<<<<<< HEAD
+    text-align: center;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+p {
+    text-align: center;    
+=======
 }
 
 
 summary {
     font-weight: bold;
     cursor: pointer;
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
 }
 
 details p {
