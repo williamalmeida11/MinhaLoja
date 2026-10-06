@@ -1,0 +1,13 @@
+:root {
+    --verde-principal: #234D36;
+    --dourado: #D9A928;
+    --creme: #F2E8C9;
+    --fundo: #F6F2E6;
+    --verde-claro: #EDF5EF;
+    --texto: #D9A928;
+}
+
+fundo-padrao {
+    background-color: var(--fundo);
+    color: var(--texto); 
+}

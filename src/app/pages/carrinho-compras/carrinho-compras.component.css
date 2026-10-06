@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+body{
+background-color: rgb(209, 209, 209);
+text-align: center;
+}
+#produtos-carrinho{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+
+.produto-carrinho{
+    background-color: azure;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+   
+    
+}
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px 15px;
+}
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+.quantidade {
+    margin-top: 5px;
+}
+=======
 :host {
   display: block;
   min-height: 100vh;
@@ -205,3 +240,4 @@ h1 {
     width: 100%;
   }
 }
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80

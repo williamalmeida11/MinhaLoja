@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+
+    <h1>Produtos</h1>
+
+    <div id="remedios">
+        <div class="produto" *ngFor="let produto of produtos">
+            <img class="imagem-produto" [src]="produto.imagem" [alt]="produto.nome">
+            <h3>{{ produto.nome }}</h3>
+            <h4>R$ {{ produto.preco.toFixed(2).replace('.', ',') }}</h4>
+            <p>{{ produto.descricao }}</p>
+            <button routerLink="/carrinho-compras"><b>Adicionar ao carrinho</b></button>
+        </div>
+    </div>
+
+
+=======
 <main class="pagina-produtos">
   <header class="cabecalho-produtos">
     <div>
@@ -63,3 +79,4 @@
     Nenhum produto disponível no momento.
   </p>
 </main>
+>>>>>>> f948d758c36b9c14c8835579a65661e07c6e2e80
