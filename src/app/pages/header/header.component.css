@@ -50,3 +50,21 @@
 .navbar-acoes {
   gap: 24px;
 }
+
+.navbar-acoes {
+  gap: 24px;
+}
+
+.navbar-acoes button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #D9A928;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.navbar-acoes button:hover {
+  opacity: 0.7;
+}

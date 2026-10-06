@@ -35,15 +35,26 @@
 
       <div class="navbar-acoes">
 
-        <a routerLink="/crud">CRUD</a>
+        @if (isAdmin) {
+          <a routerLink="/crud">CRUD</a>
+        }
 
-        <a routerLink="/cadastro-clientes">
-          Cadastre-se
-        </a>
+        @if (usuarioLogado) {
 
-        <a routerLink="/login">
-          Login
-        </a>
+          <span>Olá, {{ nomeUsuario }}</span>
+          <button type="button" (click)="sair()">Sair</button>
+
+        } @else {
+
+          <a routerLink="/cadastro-clientes">
+            Cadastre-se
+          </a>
+
+          <a routerLink="/login">
+            Login
+          </a>
+
+        }
 
       </div>
 

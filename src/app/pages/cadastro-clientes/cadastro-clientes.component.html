@@ -11,6 +11,7 @@
           id="nome"
           name="nome"
           placeholder="Digite seu nome completo"
+          [(ngModel)]="nome"
           required
         />
       </div>
@@ -22,6 +23,7 @@
           id="email"
           name="email"
           placeholder="Digite seu e-mail"
+          [(ngModel)]="email"
           required
         />
       </div>
@@ -34,6 +36,7 @@
           name="senha"
           placeholder="Digite sua senha"
           minlength="6"
+          [(ngModel)]="senha"
           required
         />
       </div>
@@ -63,7 +66,7 @@
         </label>
       </div>
 
-      <button type="submit">
+      <button type="button" (click)="cadastrar()">
         Criar conta
       </button>
 

@@ -24,7 +24,20 @@ export class LoginComponent {
 
   fazerLogin() {
     if (this.login === "admin@email.com" && this.senha === "123") {
+      localStorage.setItem('usuarioLogado', 'true');
+      localStorage.setItem('isAdmin', 'true');
+      localStorage.setItem('nomeUsuario', 'Admin');
       alert("Bem-vindo(a) admin!");
+
+    } else if (
+      this.login.trim().toLowerCase() === localStorage.getItem('clienteEmail') &&
+      this.senha.trim() === localStorage.getItem('clienteSenha')
+    ) {
+      localStorage.setItem('usuarioLogado', 'true');
+      localStorage.setItem('isAdmin', 'false');
+      localStorage.setItem('nomeUsuario', localStorage.getItem('clienteNome') || '');
+      alert(`Bem-vindo(a), ${localStorage.getItem('clienteNome')}!`);
+
     } else {
       alert("Credenciais inválidas!");
     }

@@ -212,22 +212,3 @@
 .indicadores button.ativo {
   background-color: #28583d;
 }
-
-.home-container {
-  width: 100%;
-  min-height: 500px;
-  padding-top: 20px;
-  box-sizing: border-box;
-  background-color: #f8efd3;
-}
-
-.carrinho {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: 40px;
-  margin-bottom: 15px;
-  background-color: #EDF5EF;
-
-  display: flex;
-  /* ...resto igual... */
-}
